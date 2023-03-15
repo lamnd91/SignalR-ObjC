@@ -7,13 +7,13 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Alex Billingsley" => "abillingsley@dyknow.com" }
   s.source   	 = { :git => 'https://github.com/DyKnow/SignalR-ObjC.git', :tag => '2.0.2' }
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.9'
   s.requires_arc = true
 
   s.subspec 'Core' do |sp|
     sp.source_files = 'Framework/*.{h}', 'SignalR.Client/**/*.{h,m}'
-    sp.dependency 'AFNetworking', '4.0.1'
+    sp.dependency 'AFNetworking', :git => 'https://github.com/lamnd91/AFNetworking', :commit => '5510ea8'
     sp.dependency 'SocketRocket', '0.5.1'
   end
 
